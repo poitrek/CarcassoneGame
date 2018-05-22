@@ -1,7 +1,10 @@
-﻿  Skipping... (no relevant changes detected)
-  stdafx.cpp
-  Skipping... (no relevant changes detected)
-  Engine.cpp
-  EmptyField.cpp
-  Carcassonne.cpp
-  Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\Carcassonne\Debug\Carcassonne.exe
+﻿  Carcassonne.cpp
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(305): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(413): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(417): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(482): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(488): warning C4018: '<': signed/unsigned mismatch
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(490): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(516): warning C4018: '<': signed/unsigned mismatch
+c:\users\piotr_2\source\repos\newrepo\carcassonne\carcassonne.cpp(526): warning C4018: '<': signed/unsigned mismatch
+  Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\NewRepo\Debug\Carcassonne.exe
