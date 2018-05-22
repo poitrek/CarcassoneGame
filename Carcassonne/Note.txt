@@ -1,0 +1,55 @@
+
+11.05.2018:
+
+EmptyField:
+	EmptyField *Up, *Down, *Left, *Right;
+	Tile *tile;
+
+Creator::SetEmptyFields()
+Creator::ClearEmptyFields()
+
+Press Spacja - wyœwietla *tile dla ka¿dego
+EmptyField w tablicy
+
+
+12.05.2018:
+
+klasa Engine:
+	AvailableEFs - wektor aktualnie dostêpnych pól
+		(na których mo¿na postawiæ p³ytkê)
+	AddAvailableEFs() - aktualizacja wektora z ka¿d¹ postawion¹
+		p³ytk¹
+	DrawAvailableEFs() - rysuje "plusy" na wszystkich dostêpnych polach
+
+EmptyField:
+	unique_ptr<GameObject> _plus - wskaŸnik na obiekt "+" wyœwietlaj¹cy
+		siê, jeœli pole jest dostêpne
+
++ parê zmian w Carcassonne.cpp
+
+
+17.05.2018:
+
+dodany cieñ p³ytki, pojawiaj¹cy siê gdy naje¿d¿amy na pole
+aby j¹ postawiæ
+ - tileShadow
+
+dodane sprawdzanie zgodnoœci granic p³ytek (warunek aby mo¿na by³o postawiæ)
+ - Creator::BorderMatch()
+ 
+
+-------------------------
+Do zrobienia:
+
+(Zrobione)- zmodyfikowaæ algorytm mieszaj¹cy wektor z p³ytkami (za ka¿dym razem miesza
+tak samo)
+
+- u¿yæ wyra¿eñ regularnych do odczytu danych p³ytek z pliku
+(Zrobione)- ka¿dej p³ytce w pliku przypisaæ liczbê jej kopii i zmodyfikowaæ funkcjê
+odczytuj¹c¹ dane z pliku tak, aby tworzy³a odpowiedni¹ liczbê kopii p³ytki
+(Ale mo¿na by to jeszcze dopracowaæ)
+
+- napisaæ funkcjê, która po postawieniu p³ytki ³¹czy ze sob¹ odpowiednie
+struktury
+
+...
