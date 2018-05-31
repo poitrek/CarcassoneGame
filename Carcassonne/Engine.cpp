@@ -2,6 +2,7 @@
 #include "Engine.hpp"
 
 std::vector<EmptyField*> Engine::AvailableEFs;
+Engine::_GameState Engine::GameState;
 
 void Engine::AddAvailableEFs(EmptyField &EF)
 {
@@ -16,7 +17,7 @@ void Engine::AddAvailableEFs(EmptyField &EF)
 		if (tempEF->tile == nullptr && !found)
 		{
 			AvailableEFs.push_back(tempEF);
-			tempEF->_plus = unique_ptr<GameObject>(new GameObject("images/plus.png"));
+			tempEF->_plus = unique_ptr<GameObject>(new GameObject("../Carcassonne/images/plus.png"));
 			tempEF->_plus->setPosition(tempEF->getPosition());
 			setOriginToCenter(*(tempEF->_plus));
 			tempEF->_plus->setSize(sf::Vector2f(Board::squareSize, Board::squareSize));

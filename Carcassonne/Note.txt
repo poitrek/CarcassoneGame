@@ -49,7 +49,14 @@ tak samo)
 odczytuj¹c¹ dane z pliku tak, aby tworzy³a odpowiedni¹ liczbê kopii p³ytki
 (Ale mo¿na by to jeszcze dopracowaæ)
 
+
+- kod obs³uguj¹cy dodanie nowej p³ytki - do jednej funkcji
+  np. Engine::newTile
+
 - napisaæ funkcjê, która po postawieniu p³ytki ³¹czy ze sob¹ odpowiednie
 struktury
+
+- funkcja w Engine obs³uguj¹ca stawianie pionka oraz funkcja przypisuj¹ca
+  graczowi posiad³oœæ po postawieniu pionka
 
 ...

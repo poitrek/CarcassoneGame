@@ -24,6 +24,12 @@ sf::Vector2i v_2i(sf::Vector2f vecF);
 class Engine
 {
 public:
+	enum _GameState {
+		placingTile,
+		placingPawn
+	};
+	static _GameState GameState;
+
 	static std::vector<EmptyField*> AvailableEFs;
 	static void AddAvailableEFs(EmptyField &EF);
 	static void DrawAvailableEFs(sf::RenderTarget&);

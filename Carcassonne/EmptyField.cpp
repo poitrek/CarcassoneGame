@@ -3,7 +3,7 @@
 
 extern sf::Vector2f v_2f(sf::Vector2u vecU);
 
-const std::string EmptyField::filename = "images/square_field.png";
+const std::string EmptyField::filename = "../Carcassonne/images/square_field.png";
 sf::Texture* EmptyField::texture = nullptr;
 int EmptyField::t_count = 0;
 //std::shared_ptr<sf::Texture> EmptyField::texture(nullptr);// (new sf::Texture);
