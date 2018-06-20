@@ -7,7 +7,7 @@
 class Tile;
 
 class EmptyField :
-	public GameObject, public Board
+	public GameObject
 {
 public:
 	//static std::shared_ptr<sf::Texture> texture;

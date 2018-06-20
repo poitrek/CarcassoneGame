@@ -10,7 +10,7 @@
 using namespace std;
 
 class Tile :
-	public GameObject, public Board
+	public GameObject
 	/*
 	Already available:
 	+ set/get position

@@ -3,6 +3,9 @@
 class Board
 {
 public:
+	static const sf::Vector2f boardOffset;
+
+	static const int EF_X, EF_Y;
 
 	static float squareScale;
 	static float squareSize;

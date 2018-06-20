@@ -5,10 +5,8 @@
 extern sf::Vector2f v_2f(sf::Vector2i vecI);
 extern sf::Vector2f v_2f(sf::Vector2u vecU);
 
-extern const sf::Vector2f boardOffset;
 extern sf::Vector2i v_2i(sf::Vector2f vecF);
 
-const sf::Vector2i boardOffsetI{ v_2i(boardOffset) };
 
 //static const sf::Vector2i boardOffestI{ v_conv<int, float>(boardOffset) };
 /*
@@ -92,6 +90,11 @@ void GameObject::setOrigin(sf::Vector2f vec)
 	this->origin = vec;
 }
 
+sf::Vector2f GameObject::getOrigin()
+{
+	return this->origin;
+}
+
 sf::Vector2f GameObject::getSize()
 {
 	return { sprite.getScale().x * sprite.getTexture()->getSize().x, sprite.getScale().y * sprite.getTexture()->getSize().y };
@@ -152,6 +155,8 @@ void GameObject::LoadTexture(std::string _filename)
 
 bool GameObject::mouseEntered(sf::RenderTarget& target, sf::RenderWindow& window)
 {
+	sf::Vector2i boardOffsetI{ v_2i(Board::boardOffset) }; // Przekonwertowany wektor
+
 	sf::Vector2i mpos = sf::Mouse::getPosition(window) - boardOffsetI; // Pozycja kursora w oknie
 	sf::Vector2f coord = target.mapPixelToCoords(mpos); // Pozycja kursora na mapie
 	

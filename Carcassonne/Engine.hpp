@@ -8,9 +8,7 @@
 
 extern const float BOARD_WIDTH;
 extern const float BOARD_HEIGHT;
-extern const sf::Vector2f boardOffset;
-extern const int sqf_X;
-extern const int sqf_Y;
+
 
 /// Dodatkowe - operator z wektorem2d
 std::ostream& operator << (std::ostream& pStream, sf::Vector2f vec);
@@ -26,7 +24,8 @@ class Engine
 public:
 	enum _GameState {
 		placingTile,
-		placingPawn
+		placingPawn,
+		ADDITIONAL_1
 	};
 	static _GameState GameState;
 
@@ -34,6 +33,21 @@ public:
 	static void AddAvailableEFs(EmptyField &EF);
 	static void DrawAvailableEFs(sf::RenderTarget&);
 	static bool BorderMatch(EmptyField *EF, Tile & tile);
+	static void PlaceTheTile(EmptyField *EF, vector<Tile>&, int &tileIterator, GameObject&, GameObject&);
+	// Funkcja stawiaj¹ca pionek na podanej p³ytce
+	static void PlaceThePawn(Tile &tile, sf::RenderTarget&, sf::RenderWindow&);
+
+	static void PlaceThePawn2(sf::RenderTarget&, sf::RenderWindow&);
+	static void PlaceThePawn3(sf::RenderTarget&, sf::RenderWindow&);
+
+private:
+	static Tile * CurrentTile;
+	static GameObject Circle[12];
+
+	struct PawnPlacingHandler
+	{
+		//static Tile::Border NearestBorder(sf::Vector2u intPos);
+	};
 
 private:
 
@@ -67,8 +81,8 @@ public:
 			// Dodatkowe zmienne
 			sf::Vector2f vLU = view.getCenter() - view.getSize() * 0.5f;
 			float offset = 5.f;
-			float sizeX = sqf_X * EmptyField::getSize().x;
-			float sizeY = sqf_Y * EmptyField::getSize().y;
+			float sizeX = Board::EF_X * EmptyField::getSize().x;
+			float sizeY = Board::EF_Y * EmptyField::getSize().y;
 
 			if (vLU.x < -offset && dV.x < 0)
 				dV.x = 0.f;

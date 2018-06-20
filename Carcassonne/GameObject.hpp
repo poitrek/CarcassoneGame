@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <memory>
-
+#include "Board.hpp"
 
 class GameObject
 {
@@ -38,6 +38,7 @@ public:
 	virtual sf::Vector2f getPosition(); // Zwraca pozycjê
 	void setSize(sf::Vector2f); // Ustawiamy rozmiar (za pomoc¹ setScale)
 	void setOrigin(sf::Vector2f);
+	sf::Vector2f getOrigin();
 	sf::Vector2f getSize(); // Zwraca rozmiar
 	void setTexture(sf::Texture, bool holdSize = false);
 	sf::Texture getTexture(); // Zwraca teksturê (kopiê)
