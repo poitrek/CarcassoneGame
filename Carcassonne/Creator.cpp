@@ -6,7 +6,10 @@
 #include <random>
 #include <algorithm>
 
+
+
 const std::string Creator::data_filename{ "../Carcassonne/Dane_v2.txt" };
+
 
 void Creator::SetTileAttributes(Tile &tile, std::vector<int> &indx_vector, std::vector<int> &othr_vector)
 {

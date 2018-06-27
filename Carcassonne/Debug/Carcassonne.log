@@ -1,6 +1,3 @@
-﻿  Engine.cpp
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\engine.cpp(105): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Carcassonne.cpp
+﻿  Creator.cpp
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\creator.cpp(198): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
   Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe
