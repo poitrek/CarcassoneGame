@@ -174,7 +174,6 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="MouseHandler.cpp" />
-    <ClCompile Include="NewSource.cpp" />
     <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Prop.cpp" />

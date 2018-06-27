@@ -107,9 +107,6 @@
     <ClCompile Include="Creator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NewSource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Carcassonne.rc">
