@@ -25,7 +25,7 @@ public:
 	enum _GameState {
 		placingTile,
 		placingPawn,
-		ADDITIONAL_1
+		DrawingPawnSpots
 	};
 	static _GameState GameState;
 
@@ -35,14 +35,20 @@ public:
 	static bool BorderMatch(EmptyField *EF, Tile & tile);
 	static void PlaceTheTile(EmptyField *EF, vector<Tile>&, int &tileIterator, GameObject&, GameObject&);
 	// Funkcja stawiaj¹ca pionek na podanej p³ytce
+	static void UpdateTileProps(Tile &tile);
+
 	static void PlaceThePawn(Tile &tile, sf::RenderTarget&, sf::RenderWindow&);
 
-	static void PlaceThePawn2(sf::RenderTarget&, sf::RenderWindow&);
+
+	static void DrawPawnSpots(sf::RenderTarget&, sf::RenderWindow&);
 	static void PlaceThePawn3(sf::RenderTarget&, sf::RenderWindow&);
+
+	static void SetUp();
 
 private:
 	static Tile * CurrentTile;
 	static GameObject Circle[12];
+	static shared_ptr<sf::Texture> spot_texture;
 
 	struct PawnPlacingHandler
 	{

@@ -8,8 +8,11 @@ std::vector<Tile*> Tile::tiles_placed;
 Tile::Tile(std::string _filename, float posX, float posY)
 	: GameObject(_filename, posX, posY)
 {
-	sprite.setOrigin(v_2f(texture->getSize()) * 0.5f);
+
 	this->setSize(sf::Vector2f(Board::squareSize, Board::squareSize));
+
+	this->setOrigin(v_2f(texture->getSize()) * 0.5f);
+	//this->setOrigin(Board::Square * 0.5f);
 	//sprite.setScale(Board::squareScale, Board::squareScale);
 }
 

@@ -1,3 +1,6 @@
 ﻿  Engine.cpp
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\engine.cpp(104): warning C4018: '<': signed/unsigned mismatch
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\engine.cpp(105): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Carcassonne.cpp
   Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe
