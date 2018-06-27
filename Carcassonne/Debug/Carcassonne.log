@@ -1,6 +1,9 @@
-﻿  Engine.cpp
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\engine.cpp(105): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Carcassonne.cpp
+﻿  Carcassonne.cpp
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(111): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(115): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(182): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(188): warning C4018: '<': signed/unsigned mismatch
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(190): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(221): warning C4018: '<': signed/unsigned mismatch
+  LINK : C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe not found or not built by the last incremental link; performing full link
   Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe
