@@ -1,9 +1,21 @@
-﻿  Carcassonne.cpp
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(111): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(115): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(182): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(188): warning C4018: '<': signed/unsigned mismatch
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(190): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(221): warning C4018: '<': signed/unsigned mismatch
-  LINK : C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe not found or not built by the last incremental link; performing full link
+﻿  stdafx.cpp
+  Board.cpp
+  Carcassonne.cpp
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(44): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(48): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(112): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(118): warning C4018: '<': signed/unsigned mismatch
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(120): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\carcassonne.cpp(147): warning C4018: '<': signed/unsigned mismatch
+  Creator.cpp
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\creator.cpp(195): warning C4244: 'initializing': conversion from 'std::chrono::system_clock::rep' to 'unsigned int', possible loss of data
+  Engine.cpp
+c:\users\piotr_2\source\repos\carcassonnegame\carcassonne\engine.cpp(104): warning C4018: '<': signed/unsigned mismatch
+  GameObject.cpp
+  MouseHandler.cpp
+  Prop.cpp
+  EmptyField.cpp
+  Tile.cpp
+  TileVector.cpp
+  Generating Code...
   Carcassonne.vcxproj -> C:\Users\Piotr_2\Source\Repos\CarcassonneGame\Debug\Carcassonne.exe

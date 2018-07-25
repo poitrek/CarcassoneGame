@@ -2,11 +2,11 @@
 #include "Engine.hpp"
 
 std::vector<EmptyField*> Engine::AvailableEFs;
-Engine::_GameState Engine::GameState;
+/*
 Tile * Engine::CurrentTile;
 GameObject Engine::Circle[12];
 shared_ptr<sf::Texture> Engine::spot_texture;
-
+*/
 void Engine::AddAvailableEFs(EmptyField &EF)
 {
 	// Wektor z s¹siadami tego pola
@@ -96,10 +96,9 @@ void Engine::PlaceTheTile(EmptyField * EF, vector<Tile> &tileVector, int &tileIt
 
 	std::cout << "Tile placing available." << std::endl;
 	tileVector[tileIterator].Place(EF);
-
-	Engine::CurrentTile = &tileVector[tileIterator];
-
+	
 	Engine::AddAvailableEFs(*(tileVector[tileIterator].EF));
+
 	tileIterator++;
 
 	if (tileIterator < tileVector.size())
@@ -114,8 +113,6 @@ void Engine::PlaceTheTile(EmptyField * EF, vector<Tile> &tileVector, int &tileIt
 		tileShadow_s->setRotation(0);
 	}
 
-	// Zmieniamy stan gry na stawianie pionka
-	Engine::GameState = DrawingPawnSpots;
 
 }
 
@@ -131,107 +128,10 @@ void Engine::UpdateTileProps(Tile & tile)
 }
 
 
-/* Stara wersja funkcji, nieaktualna - mia³a dzia³aæ
-poprzez klikniêcie w dowolne miejsce p³ytki i pobranie
-z danego piksela koloru oraz okreœlenie, w który obiekt
-na p³ytce kliknêliœmy. Rozwi¹zanie okaza³o siê zbyt 
-skomplikowane */
-void Engine::PlaceThePawn(Tile & tile, sf::RenderTarget &board, sf::RenderWindow &window)
-{	
-	// Konwertujemy teksturê na obraz
-	sf::Image texImage = tile.getTexture().copyToImage();
-
-	// Potrzebujemy pozycjê kursora wzglêdem p³ytki
-	sf::Vector2i boardOffsetI{ v_2i(Board::boardOffset) }; // Przekonwertowany wektor
-	sf::Vector2i mpos = sf::Mouse::getPosition(window) - boardOffsetI; // Pozycja kursora w oknie
-	sf::Vector2f coord = board.mapPixelToCoords(mpos); // Pozycja kursora na mapie
-	// Pozycja lewego górnego rogu p³ytki
-	sf::Vector2f gpos = tile.getPosition() - 0.5f * tile.getOrigin();
-	// Wektor pozycji kursora wewn¹trz p³ytki
-	sf::Vector2u intPos = v_conv<unsigned int, float>(coord - gpos);
-
-	sf::Color col = texImage.getPixel(intPos.x, intPos.y);
-
-	// PawnPlacingHandler::NearestBorder musi zwróciæ informacjê
-	// o tym, do której krawêdzi dany punkt (intPos) ma najbli¿ej.
-	// Nastêpnie trzeba bêdzie tê informacjê dalej przetworzyæ z
-	// uzyskanym kolorem piksela.
-
-
-}
-
-
-
-void Engine::DrawPawnSpots(sf::RenderTarget &, sf::RenderWindow &)
-{
-	
-	// Rysujemy punkty, w których bêdzie mo¿na postawiæ pionek
-	
-	// Pozycja lewego górnego rogu p³ytki
-	sf::Vector2f gpos = CurrentTile->getPosition();// -0.5f * CurrentTile->getOrigin();
-	float buffer{ Board::squareSize * 0.13f };
-	
-
-	// Ustawiamy pozycje punktów
-	GameObject * c_temp = &Circle[0];
-	{
-		sf::Vector2f vec(0, -Board::squareSize*0.5f + buffer);
-		c_temp->setPosition(gpos + vec);
-	}
-	c_temp = &Circle[1];
-	{
-		sf::Vector2f vec(Board::squareSize*0.5f - buffer, 0);
-		c_temp->setPosition(gpos + vec);
-	}
-	c_temp = &Circle[2];
-	{
-		sf::Vector2f vec(0, Board::squareSize*0.5f - buffer);
-		c_temp->setPosition(gpos + vec);
-	}
-	c_temp = &Circle[3];
-	{
-		sf::Vector2f vec(-Board::squareSize*0.5f + buffer, 0);
-		c_temp->setPosition(gpos + vec);
-	}
-
-	cout << "---- Engine::DrawPawnSpots() ----" << endl;
-
-	cout << "gpos: " << gpos << endl;
-	cout << "CurrentTile.getPostition(): " << CurrentTile->getPosition() << endl;
-	cout << "CurrentTile.getOrigin(): " << CurrentTile->getOrigin() << endl;
-	cout << "buffer:" << buffer << endl;
-
-
-	for (int i = 0; i < 4; i++)
-	{
-		cout << "Circle[" << i << "]:" << Circle[i].getPosition() << endl;
-	}
-
-	cout << "---------------------------------" << endl << endl;
-
-	GameState = Engine::placingPawn;
-
-}
-
-void Engine::PlaceThePawn3(sf::RenderTarget &target, sf::RenderWindow &window)
-{
-	for (int i = 0; i < 4; i++)
-		Circle[i].draw(target);
-}
 
 void Engine::SetUp()
 {
-	//sf::Texture circle_texture;
-	spot_texture = shared_ptr<sf::Texture>(new sf::Texture);
-	spot_texture->loadFromFile("images/circle.png");
-	sf::Vector2f spot_size{ Board::Square * 0.1f };
-	// Ustawiamy teksturê i rozmiar punktów
-	for (int i = 0; i < 12; i++)
-	{
-		Circle[i].setTexture(*spot_texture);
-		Circle[i].setSize(spot_size);
-		setOriginToCenter(Circle[i]);
-	}
+	
 }
 
 

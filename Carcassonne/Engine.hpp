@@ -22,13 +22,7 @@ sf::Vector2i v_2i(sf::Vector2f vecF);
 class Engine
 {
 public:
-	enum _GameState {
-		placingTile,
-		placingPawn,
-		DrawingPawnSpots
-	};
-	static _GameState GameState;
-
+	
 	static std::vector<EmptyField*> AvailableEFs;
 	static void AddAvailableEFs(EmptyField &EF);
 	static void DrawAvailableEFs(sf::RenderTarget&);
@@ -36,16 +30,11 @@ public:
 	static void PlaceTheTile(EmptyField *EF, vector<Tile>&, int &tileIterator, GameObject&, GameObject&);
 	// Funkcja stawiaj¹ca pionek na podanej p³ytce
 	static void UpdateTileProps(Tile &tile);
-
-	static void PlaceThePawn(Tile &tile, sf::RenderTarget&, sf::RenderWindow&);
-
-
-	static void DrawPawnSpots(sf::RenderTarget&, sf::RenderWindow&);
-	static void PlaceThePawn3(sf::RenderTarget&, sf::RenderWindow&);
-
+	
 	static void SetUp();
 
 private:
+	/*
 	static Tile * CurrentTile;
 	static GameObject Circle[12];
 	static shared_ptr<sf::Texture> spot_texture;
@@ -54,7 +43,7 @@ private:
 	{
 		//static Tile::Border NearestBorder(sf::Vector2u intPos);
 	};
-
+	*/
 private:
 
 };

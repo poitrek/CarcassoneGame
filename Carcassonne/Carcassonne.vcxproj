@@ -152,11 +152,8 @@
     <ClInclude Include="Board.hpp" />
     <ClInclude Include="Creator.hpp" />
     <ClInclude Include="Engine.hpp" />
-    <ClInclude Include="Game.hpp" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="MouseHandler.hpp" />
-    <ClInclude Include="Pawn.hpp" />
-    <ClInclude Include="Player.hpp" />
     <ClInclude Include="Prop.hpp" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="EmptyField.hpp" />
@@ -171,11 +168,8 @@
     <ClCompile Include="Carcassonne.cpp" />
     <ClCompile Include="Creator.cpp" />
     <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="MouseHandler.cpp" />
-    <ClCompile Include="Pawn.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Prop.cpp" />
     <ClCompile Include="EmptyField.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -192,6 +186,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Note.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
